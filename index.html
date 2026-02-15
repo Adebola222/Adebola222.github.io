@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adebola Adeola Adewale - Statistics Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2c5282;
+        }
+        
+        h1 {
+            color: #2c5282;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            font-style: italic;
+        }
+        
+        .contact-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .contact-links a {
+            color: #2c5282;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
+        
+        h2 {
+            color: #2c5282;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .about-text {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .research-interests {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .interest-tag {
+            background-color: #e6f2ff;
+            color: #2c5282;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .highlight-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #2c5282;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box h3 {
+            color: #2c5282;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #2c5282;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .project-status {
+            display: inline-block;
+            background-color: #d1fae5;
+            color: #065f46;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+        
+        .project-description {
+            color: #666;
+            margin-bottom: 5px;
+            line-height: 1.6;
+        }
+        
+        .project-links {
+            margin-top: 10px;
+        }
+        
+        .project-link {
+            display: inline-block;
+            color: #2c5282;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 0.95em;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
+        .cv-download {
+            display: inline-block;
+            background-color: #2c5282;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .cv-download:hover {
+            background-color: #1e3a5f;
+        }
+        
+        .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .education-title {
+            font-weight: 600;
+            color: #2c5282;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .education-detail {
+            color: #666;
+            margin-bottom: 3px;
+        }
+        
+        .awards-section {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+        
+        .awards-section h3 {
+            color: #2c5282;
+            margin-bottom: 12px;
+            font-size: 1em;
+        }
+        
+        .awards-list {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-section">
+            <!-- Replace 'your-photo.jpg' with your actual photo filename -->
+            <img src="your-photo.jpg" alt="Adebola Adeola Adewale" class="profile-image">
+            
+            <div>
+                <h1>Adebola Adeola Adewale</h1>
+                <p class="subtitle">Statistics Graduate | Aspiring Researcher in Causal Inference & Bayesian Methods</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:debola222@gmail.com">📧 Email</a>
+                    <a href="https://linkedin.com/in/adebolaadewale" target="_blank">🔗 Linkedln</a>
+                    <a href="https://github.com/Adebola222" target="_blank">💻 Github</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I am a First Class Honours graduate in Statistics, from the Federal University 
+                of Technology, Akure, Nigeria. My academic 
+                journey has given me a strong foundation in statistical theory, econometric methods, and applied 
+                data analysis using R, Python, and Stata.
+            </p>
+            <p class="about-text" style="margin-top: 15px;">
+                I am particularly drawn to causal inference methods and their applications in economics and policy 
+                evaluation. My undergraduate thesis explored model misspecification in production function estimation, 
+                which sparked my interest in developing robust statistical methods that perform well under real-world 
+                conditions. I am currently exploring Bayesian approaches to causal inference and learning how these 
+                methods can address the challenges of policy evaluation in volatile economies.
+            </p>
+            <p class="about-text" style="margin-top: 15px;">
+                I am actively seeking PhD opportunities where I can develop methodological expertise in causal inference 
+                and Bayesian statistics while working on economically meaningful applications. I believe that rigorous 
+                statistical methodology, combined with careful attention to real-world economic contexts, can lead to 
+                research that is both theoretically sound and practically relevant.
+            </p>
+            
+            <div class="highlight-box">
+                <h3>Research Interests</h3>
+                <div class="research-interests">
+                    <span class="interest-tag">Causal Inference</span>
+                    <span class="interest-tag">Bayesian Methods</span>
+                    <span class="interest-tag">Applied Econometrics</span>
+                    <span class="interest-tag">Policy Evaluation</span>
+                    <span class="interest-tag">Robust Statistical Methods</span>
+                </div>
+                <p style="margin-top: 12px; color: #666; font-size: 0.95em; font-style: italic;">
+                    I am particularly interested in developing causal inference methods that are robust to model 
+                    misspecification, with applications in economic policy evaluation and development economics.
+                </p>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="education-title">B.Tech. Statistics, First Class Honours (CGPA: 4.71/5.00)</div>
+                <p class="education-detail">Federal University of Technology, Akure (FUTA) | 2019–2025</p>
+                <p class="education-detail" style="margin-top: 8px;">
+                    <strong>Undergraduate Thesis:</strong> Evaluation of Cobb–Douglas Production Function in the 
+                    Presence of Misspecification Error: A Simultaneous Equation Model
+                </p>
+                <p class="education-detail">
+                    <strong>Advisor:</strong> Dr O. O. Ojo
+                </p>
+            </div>
+            
+            <div class="awards-section">
+                <h3>Selected Honors & Awards</h3>
+                <div class="awards-list">
+                    • Best Graduating Student, Department of Statistics (2025)<br>
+                    • Vice Chancellor's Departmental Award (2025)<br>
+                    • VC's Honour Roll – 7 of 10 Semesters (2022–2025)<br>
+                    • Best in Regression Analysis I & II (2024–2025)<br>
+                    • Best in Design and Analysis of Experiments I & II (2024–2025)<br>
+                    • Graceland Scholarship – Full Session Tuition Award (2024)<br>
+                    • Best in Distribution Theory I – Combined Mathematics & Statistics Departments (2023)
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Research Projects</h2>
+            
+            <p style="color: #666; margin-bottom: 25px; font-style: italic;">
+                These projects represent my independent work exploring econometric methods and their applications. 
+                I am currently expanding this portfolio with replication studies in causal inference and Bayesian statistics.
+            </p>
+            
+            <div class="project-item">
+                <div class="project-title">
+                    Panel Data Analysis: Determinants of Capital Allocation Decisions
+                </div>
+                <p class="project-description">
+                    Applied panel data methods to analyze capital allocation decisions across three companies. 
+                    Implemented and compared pooled OLS, fixed effects, and random effects models. Conducted 
+                    comprehensive model diagnostics including Hausman specification tests, heteroskedasticity 
+                    tests, and serial correlation checks. Used Stata for complete analysis workflow from data 
+                    cleaning through final estimation and interpretation.
+                </p>
+                <p class="project-description" style="margin-top: 8px;">
+                    <strong>Methods:</strong> Panel data models, fixed effects, random effects, model diagnostics<br>
+                    <strong>Tools:</strong> Stata
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link">💻 GitHub Repository</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">
+                    Regression Analysis: EU ESG Regulation Impact on Board Composition
+                </div>
+                <p class="project-description">
+                    Examined the relationship between European Union ESG regulations and changes in corporate 
+                    board composition. Performed complete regression analysis including data manipulation, 
+                    exploratory analysis, model estimation, and robustness checks. Addressed potential 
+                    endogeneity concerns and tested model assumptions thoroughly.
+                </p>
+                <p class="project-description" style="margin-top: 8px;">
+                    <strong>Methods:</strong> Multiple regression, interaction effects, robustness checks<br>
+                    <strong>Tools:</strong> Stata
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link">💻 GitHub Repository</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">
+                    Hierarchical Regression: Metaverse Announcements and Firm Value
+                </div>
+                <p class="project-description">
+                    Implemented hierarchical/sequential regression to study how metaverse-related announcements 
+                    affect firm valuation. Performed complete data pipeline from web-scraped announcement data 
+                    through final statistical analysis. Used tidyverse for data manipulation and various R 
+                    packages for econometric analysis and visualization.
+                </p>
+                <p class="project-description" style="margin-top: 8px;">
+                    <strong>Methods:</strong> Hierarchical regression, event study methodology<br>
+                    <strong>Tools:</strong> R (tidyverse, econometric packages)
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link">💻 GitHub Repository</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">
+                    Replication Studies in Causal Inference
+                    <span class="project-status">In Progress</span>
+                </div>
+                <p class="project-description">
+                    Currently working on replicating recent papers in causal inference methodology, focusing on 
+                    difference-in-differences, synthetic control methods, and Bayesian approaches to treatment 
+                    effect estimation. These replication exercises are helping me develop deeper understanding 
+                    of modern causal inference methods and identify potential research directions for graduate study.
+                </p>
+                <p class="project-description" style="margin-top: 8px;">
+                    <strong>Focus areas:</strong> DiD methods, synthetic control, Bayesian causal inference<br>
+                    <strong>Status:</strong> Ongoing (updated regularly)
+                </p>
+                <div class="project-links">
+                    <a href="#" class="project-link">💻 GitHub Repository</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="experience">
+            <h2>Research Experience</h2>
+            
+            <div class="project-item">
+                <div class="project-title">Research Assistant & Quantitative Research Analyst</div>
+                <p class="project-description" style="color: #666;">
+                    Department of Statistics, Federal University of Technology Akure | October 2024 – October 2025
+                </p>
+                <p class="project-description" style="margin-top: 10px;">
+                    Gained research experience working on various econometric and statistical projects under faculty 
+                    supervision. Conducted time-series analysis, forecasting, and regression modeling using R, Python, 
+                    and Stata. Contributed to data cleaning, model estimation, and manuscript preparation for academic 
+                    research projects. This experience provided valuable exposure to the research process and helped me 
+                    develop practical skills in applied econometrics.
+                </p>
+                <p class="project-description" style="margin-top: 8px;">
+                    <strong>Skills developed:</strong> Time series analysis, forecasting methods, Bayesian estimation, 
+                    reproducible research workflows, academic writing
+                </p>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-title">Field Research & Data Collection</div>
+                <p class="project-description" style="color: #666;">
+                    Development Research Project, Ondo State | June 2024
+                </p>
+                <p class="project-description" style="margin-top: 10px;">
+                    Led field team for structured survey administration in Idanre Local Government Area. Trained 
+                    enumerators on digital data collection using SurveyCTO and implemented quality control procedures 
+                    for field data validation. This experience gave me firsthand exposure to the challenges of primary 
+                    data collection in developing economy contexts.
+                </p>
+            </div>
+        </section>
+        
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <p style="margin-bottom: 20px; color: #666;">
+                Download my full CV for comprehensive details about my education, research experience, technical 
+                skills, and academic achievements.
+            </p>
+            <a href="your-cv.pdf" class="cv-download" download>📄 Download Academic CV</a>
+            <a href="full-cv.pdf" class="cv-download" download>📄 Download Professional CV</a>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Adebola Adeola Adewale. Last updated: February 2026</p>
+        <p style="margin-top: 10px; font-size: 0.85em;">
+            Member, Chartered Institute of Statisticians of Nigeria (CISON)
+        </p>
+    </footer>
+</body>
+</html>
