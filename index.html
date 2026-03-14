@@ -230,6 +230,65 @@
             color: #666;
             line-height: 1.8;
         }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            flex: 1 1 200px;
+            background-color: #f8fafc;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        .skill-category h4 {
+            color: #2c5282;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        
+        .skill-items {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .paper-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+        
+        .paper-item:last-child {
+            border-bottom: none;
+        }
+        
+        .paper-title {
+            font-weight: 600;
+            color: #2c5282;
+            font-size: 1.05em;
+            margin-bottom: 5px;
+        }
+        
+        .paper-authors {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+        
+        .paper-status {
+            display: inline-block;
+            background-color: #fef3c7;
+            color: #92400e;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-left: 8px;
+        }
         
         footer {
             text-align: center;
@@ -257,17 +316,16 @@
 <body>
     <header>
         <div class="profile-section">
-            <!-- Replace 'your-photo.jpg' with your actual photo filename -->
             <img src="your-photo.jpg" alt="Adebola Adeola Adewale" class="profile-image">
             
             <div>
                 <h1>Adebola Adeola Adewale</h1>
-                <p class="subtitle">Statistics Graduate | Aspiring Researcher in Causal Inference & Bayesian Methods</p>
+                <p class="subtitle">Statistics Graduate | Aspiring Researcher in Causal Inference & Policy Evaluation</p>
                 
                 <div class="contact-links">
-                    <a href="mailto:debola222@gmail.com">📧 Email</a>
-                    <a href="https://linkedin.com/in/adebolaadewale" target="_blank">🔗 Linkedln</a>
-                    <a href="https://github.com/Adebola222" target="_blank">💻 Github</a>
+                    <a href="mailto:debola222@gmail.com">📧 debola222@gmail.com</a>
+                    <a href="https://linkedin.com/in/adebolaadewale" target="_blank">🔗 LinkedIn</a>
+                    <a href="https://github.com/Adebola222" target="_blank">💻 GitHub</a>
                 </div>
             </div>
         </div>
@@ -277,36 +335,26 @@
         <section id="about">
             <h2>About Me</h2>
             <p class="about-text">
-                I am a First Class Honours graduate in Statistics, from the Federal University 
-                of Technology, Akure, Nigeria. My academic 
-                journey has given me a strong foundation in statistical theory, econometric methods, and applied 
-                data analysis using R, Python, and Stata.
+                I am a First Class Honours graduate in Statistics from the Federal University of Technology, Akure, Nigeria. My academic journey has given me a strong foundation in statistical theory, econometric methods, and applied data analysis using R, Python, and Stata.
             </p>
             <p class="about-text" style="margin-top: 15px;">
-                I am particularly drawn to causal inference methods and their applications in economics and policy 
-                evaluation. My undergraduate thesis explored model misspecification in production function estimation, 
-                which sparked my interest in developing robust statistical methods that perform well under real-world 
-                conditions. I am currently exploring Bayesian approaches to causal inference and learning how these 
-                methods can address the challenges of policy evaluation in volatile economies.
+                My undergraduate thesis on model misspecification in production function estimation sparked my interest in developing robust statistical methods that perform well under real-world conditions. This led me to causal inference—where I now focus on estimating treatment effects using panel data, difference-in-differences, and regression discontinuity designs.
             </p>
             <p class="about-text" style="margin-top: 15px;">
-                I am actively seeking PhD opportunities where I can develop methodological expertise in causal inference 
-                and Bayesian statistics while working on economically meaningful applications. I believe that rigorous 
-                statistical methodology, combined with careful attention to real-world economic contexts, can lead to 
-                research that is both theoretically sound and practically relevant.
+                I am actively seeking PhD opportunities where I can develop methodological expertise in causal inference and Bayesian statistics while working on economically meaningful applications—particularly in policy evaluation and development economics.
             </p>
             
             <div class="highlight-box">
                 <h3>Research Interests</h3>
                 <div class="research-interests">
                     <span class="interest-tag">Causal Inference</span>
-                    <span class="interest-tag">Bayesian Methods</span>
-                    <span class="interest-tag">Applied Econometrics</span>
+                    <span class="interest-tag">Panel Data Econometrics</span>
+                    <span class="interest-tag">Treatment Effects</span>
                     <span class="interest-tag">Policy Evaluation</span>
+                    <span class="interest-tag">Bayesian Methods</span>
                 </div>
                 <p style="margin-top: 12px; color: #666; font-size: 0.95em; font-style: italic;">
-                    I am particularly interested in developing causal inference methods that are robust to model 
-                    misspecification, with applications in economic policy evaluation and development economics.
+                    I am particularly interested in developing methods that are robust to model misspecification and measurement error, with applications in economic policy evaluation.
                 </p>
             </div>
         </section>
@@ -317,8 +365,7 @@
                 <div class="education-title">B.Tech. Statistics, First Class Honours (CGPA: 4.71/5.00)</div>
                 <p class="education-detail">Federal University of Technology, Akure (FUTA) | 2019–2025</p>
                 <p class="education-detail" style="margin-top: 8px;">
-                    <strong>Undergraduate Thesis:</strong> Evaluation of Cobb–Douglas Production Function in the 
-                    Presence of Misspecification Error: A Simultaneous Equation Model
+                    <strong>Undergraduate Thesis:</strong> Evaluation of Cobb–Douglas Production Function in the Presence of Misspecification Error: A Simultaneous Equation Model
                 </p>
                 <p class="education-detail">
                     <strong>Advisor:</strong> Dr O. O. Ojo
@@ -339,52 +386,108 @@
             </div>
         </section>
         
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Statistical Software</h4>
+                    <div class="skill-items">
+                        R • Python • Stata
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>R Packages</h4>
+                    <div class="skill-items">
+                        plm • fixest • did • tidyverse • stargazer • rdrobust
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Econometric Methods</h4>
+                    <div class="skill-items">
+                        Panel Data (FE/RE) • DiD • RDD • IV • Time Series • Forecasting
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Other</h4>
+                    <div class="skill-items">
+                        Git/GitHub • LaTeX • RMarkdown • Reproducible Research
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+     <section id="publications">
+    <h2>Publications & Working Papers</h2>
+    
+    <div class="paper-item">
+        <div class="paper-title">
+            Evaluation of Cobb–Douglas Production Function in the Presence of Misspecification Error: A Simultaneous Equation Model
+            <span class="paper-status">Under Review</span>
+        </div>
+        <p class="paper-authors">Adewale, A. A., & Ojo, O. O.</p>
+        <p class="project-description">
+            Uses Monte Carlo simulations to examine how model misspecification biases estimates. Found that simultaneous equation methods reduce bias compared to single-equation approaches when endogeneity is present.
+        </p>
+    </div>
+    
+    <div class="paper-item">
+        <div class="paper-title">
+            Hierarchical Individual Effect Model Estimation in BRICS Energy Consumption: A Bayesian Viewpoint
+            <span class="paper-status">Under Review</span>
+        </div>
+        <p class="paper-authors">Ojo, O. O., Adepetun, A. O., & Adewale, A. A.</p>
+        <p class="project-description">
+            Applies Bayesian hierarchical models to study energy consumption patterns across BRICS countries, which accounts for country-specific heterogeneity while borrowing strength across the panel for more efficient estimates.
+        </p>
+    </div>
+     <!-- Add more as needed -->
+</section>
+ 
+        
         <section id="projects">
             <h2>Research Projects</h2>
             
-            <p style="color: #666; margin-bottom: 25px; font-style: italic;">
-                These projects represent my independent work exploring econometric methods and their applications. 
-                I am currently expanding this portfolio with replication studies in causal inference and Bayesian statistics.
-            </p>
-            
             <div class="project-item">
                 <div class="project-title">
-                    Panel Data Analysis: Determinants of Capital Allocation Decisions
+                    Panel Data Analysis: Heterogeneity in Corporate Capital Allocation
                 </div>
                 <p class="project-description">
-                    Applied panel data methods to analyze capital allocation decisions across three companies. 
-                    Implemented and compared pooled OLS, fixed effects, and random effects models. Conducted 
-                    comprehensive model diagnostics including Hausman specification tests, heteroskedasticity 
-                    tests, and serial correlation checks. Used Stata for complete analysis workflow from data 
-                    cleaning through final estimation and interpretation.
+                    <strong>Research Question:</strong> Do the determinants of capital structure operate homogeneously across firms, or are effects firm-specific?
+                </p>
+                <p class="project-description">
+                    <strong>Design:</strong> Compared pooled OLS, fixed effects, and random effects models across 3 firms (32 years). Hausman test favored FE. Firm-level analysis revealed opposite-signed effects—interest rates affect manufacturing vs. financial firms differently.
+                </p>
+                <p class="project-description">
+                    <strong>Finding:</strong> Aggregate models show null results, but firm-level analysis reveals heterogeneity masked in pooled specifications.
                 </p>
                 <p class="project-description" style="margin-top: 8px;">
-                    <strong>Methods:</strong> Panel data models, fixed effects, random effects, model diagnostics<br>
-                    <strong>Tools:</strong> Stata
+                    <strong>Methods:</strong> Panel FE/RE, Hausman test, robust SEs, interaction analysis<br>
+                    <strong>Tools:</strong> Stata (xtreg, xttest3, xtcsd, xtserial)
                 </p>
                 <div class="project-links">
-                    <a href="https://github.com/Adebola222/Capital-Allocation-Panel-Analysis/tree/main/Capital" class="project-link">💻 GitHub Repository</a>
+                    <a href="https://github.com/Adebola222/Capital-Allocation-Panel-Analysis" class="project-link">💻 GitHub Repository</a>
                 </div>
             </div>
             
             <div class="project-item">
-            <div class="project-item">
-    <div class="project-title">
-        Panel Data Analysis:  EU ESG Regulation Impact 
-    </div>
-    <p class="project-description">
-        Analyzed whether EU's Non-Financial Reporting Directive (NFRD, 2014) changed corporate board 
-        composition using panel data from 588 European companies (2008-2022). Applied fixed effects 
-        regression to compare each company to itself before vs. after regulation, controlling for 
-        time-invariant firm characteristics. 
-    </p>
-    <p class="project-description" style="margin-top: 8px;">
-        <strong>Methods:</strong> Fixed effects regression, panel data econometrics, difference-in-means tests<br>
-        <strong>Tools:</strong> R (plm, tidyverse, stargazer)
-    </p>
-    <div class="project-links">
-        <a href="https://github.com/Adebola222/ESG-regulation-board-composition" class="project-link">💻 GitHub Repository</a>
-
+                <div class="project-title">
+                    Panel Data Analysis: EU ESG Regulation and Corporate Governance
+                </div>
+                <p class="project-description">
+                    <strong>Research Question:</strong> Did the EU's Non-Financial Reporting Directive (NFRD, 2014) change corporate board composition?
+                </p>
+                <p class="project-description">
+                    <strong>Design:</strong> Fixed effects regression comparing 588 European companies before vs. after regulation (2008-2022). Each company serves as its own control, eliminating time-invariant confounding.
+                </p>
+                <p class="project-description">
+                    <strong>Finding:</strong> Regulation led to strategic optimization—gender diversity (+13.7pp), board independence (+8.5pp), and CSR committees (+7.8%) all increased, while board size decreased slightly. All effects significant at p < 0.001.
+                </p>
+                <p class="project-description" style="margin-top: 8px;">
+                    <strong>Methods:</strong> Fixed effects panel regression, hypothesis testing, visualization of time trends<br>
+                    <strong>Tools:</strong> R (plm, tidyverse, stargazer)
+                </p>
+                <div class="project-links">
+                    <a href="https://github.com/Adebola222/ESG-regulation-board-composition" class="project-link">💻 GitHub Repository</a>
                 </div>
             </div>
             
@@ -393,11 +496,17 @@
                     Difference-in-Differences: Cyberattack Impact on Healthcare Expenses
                 </div>
                 <p class="project-description">
-                    Implemented a DiD regression to study whether the 2020 Blackbaud ransomware cyberattack increased                   operating expenses for affected hospitals. R was used for the complete analysis
+                    <strong>Research Question:</strong> Did the 2020 Blackbaud ransomware attack increase operating expenses for affected hospitals?
+                </p>
+                <p class="project-description">
+                    <strong>Design:</strong> Compared 25 attacked vs. 34 non-attacked hospitals (2017–2020) using two-way fixed effects DiD. Parallel trends assumption tested visually and statistically (p=0.692).
+                </p>
+                <p class="project-description">
+                    <strong>Finding:</strong> Attacked hospitals experienced a 20.4% increase in expenses (p=0.06)—approximately $218M for the average affected hospital.
                 </p>
                 <p class="project-description" style="margin-top: 8px;">
-                    <strong>Methods:</strong> Difference-in-Differences (DiD)<br>
-                    <strong>Tools:</strong> R (tidyverse, econometric packages)
+                    <strong>Methods:</strong> DiD, fixed effects, parallel trends testing, event study visualization<br>
+                    <strong>Tools:</strong> R (fixest, tidyverse, broom)
                 </p>
                 <div class="project-links">
                     <a href="https://github.com/Adebola222/Cyberattack-Impact-on-Healthcare-Expenses" class="project-link">💻 GitHub Repository</a>
@@ -406,21 +515,18 @@
             
             <div class="project-item">
                 <div class="project-title">
-                    Replication Studies in Causal Inference
+                    Replication: London Fog and Mortality (Hanlon 2018)
                     <span class="project-status">In Progress</span>
                 </div>
                 <p class="project-description">
-                    Currently working on replicating recent papers in causal inference methodology, focusing on 
-                    difference-in-differences, synthetic control methods, and Bayesian approaches to treatment 
-                    effect estimation. These replication exercises are helping me develop deeper understanding 
-                    of modern causal inference methods and identify potential research directions for graduate study.
+                    <strong>Overview:</strong> Replicating Hanlon's (2018) regression discontinuity design studying the causal effect of historical air pollution on mortality in London (1866–1965). This project builds skills in quasi-experimental methods while exploring connections to modern causal inference challenges.
                 </p>
                 <p class="project-description" style="margin-top: 8px;">
-                    <strong>Focus areas:</strong> DiD methods, synthetic control, Bayesian causal inference<br>
-                    <strong>Status:</strong> Ongoing 
+                    <strong>Methods:</strong> Regression Discontinuity Design, local polynomial estimation, placebo tests<br>
+                    <strong>Tools:</strong> Python (pandas, numpy, statsmodels, rdrobust)
                 </p>
                 <div class="project-links">
-                    <a href="#" class="project-link">💻 GitHub Repository</a>
+                    <a href="https://github.com/Adebola222/london-fog-replication" class="project-link">💻 GitHub Repository</a>
                 </div>
             </div>
         </section>
@@ -434,33 +540,26 @@
                     Department of Statistics, Federal University of Technology Akure | October 2024 – October 2025
                 </p>
                 <p class="project-description" style="margin-top: 10px;">
-                    Gained research experience working on various econometric and statistical projects under faculty 
-                    supervision. Conducted time-series analysis, forecasting, and regression modeling using R, Python, 
-                    and Stata. Contributed to data cleaning, model estimation, and manuscript preparation for academic 
-                    research projects. This experience provided valuable exposure to the research process and helped me 
-                    develop practical skills in applied econometrics.
+                    Conducted time-series analysis, forecasting, and regression modeling using R, Python, and Stata. Contributed to data cleaning, model estimation, and manuscript preparation for academic research projects. Developed skills in applied econometrics and reproducible research workflows.
                 </p>
                 <p class="project-description" style="margin-top: 8px;">
-                    <strong>Skills developed:</strong> Time series analysis, forecasting methods, Bayesian estimation, 
-                    reproducible research workflows, academic writing
+                    <strong>Skills developed:</strong> Time series analysis, forecasting methods, Bayesian estimation, reproducible research workflows, academic writing
                 </p>
             </div>
-            
         </section>
         
         <section id="cv">
             <h2>Curriculum Vitae</h2>
             <p style="margin-bottom: 20px; color: #666;">
-                Download my full CV for comprehensive details about my education, research experience, technical 
-                skills, and academic achievements.
+                Download my full CV for comprehensive details about my education, research experience, technical skills, and academic achievements.
             </p>
-            <a href="your-cv.pdf" class="cv-download" download>📄 Download Academic CV</a>
-            <a href="full-cv.pdf" class="cv-download" download>📄 Download Professional CV</a>
+            <a href="RESUME.pdf" class="cv-download" download>📄 Download Academic CV</a>
+            <a href="ACADEMIC.pdf" class="cv-download" download>📄 Download Professional CV</a>
         </section>
     </div>
     
     <footer>
-        <p>&copy; 2026 Adebola Adeola Adewale. Last updated: February 2026</p>
+        <p>&copy; 2026 Adebola Adeola Adewale. Last updated: March 2026</p>
         <p style="margin-top: 10px; font-size: 0.85em;">
             Member, Chartered Institute of Statisticians of Nigeria (CISON)
         </p>
